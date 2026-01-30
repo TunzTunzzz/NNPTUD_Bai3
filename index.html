@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Danh sách sản phẩm</h1>
+
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm theo tên sản phẩm...">
+            </div>
+
+            <div class="sort-controls">
+                <button id="sortPriceAsc">Giá tăng</button>
+                <button id="sortPriceDesc">Giá giảm</button>
+                <button id="sortNameAsc">Tên A-Z</button>
+                <button id="sortNameDesc">Tên Z-A</button>
+            </div>
+
+            <div class="pagination-controls-top">
+                <label for="pageSize">Hiển thị:</label>
+                <select id="pageSize">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Hình ảnh</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Mô tả</th>
+                </tr>
+            </thead>
+            <tbody id="productTableBody">
+                <!-- Dữ liệu sẽ được render ở đây -->
+            </tbody>
+        </table>
+
+        <div class="pagination">
+            <button id="prevPage">Trước</button>
+            <span id="pageInfo">Trang 1</span>
+            <button id="nextPage">Sau</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
